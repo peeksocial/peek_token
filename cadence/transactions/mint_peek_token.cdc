@@ -1,5 +1,5 @@
-import NonFungibleToken from "../../contracts/NonFungibleToken.cdc"
-import PeekToken from "../../contracts/PeekToken.cdc"
+import NonFungibleToken from "../contracts/NonFungibleToken.cdc"
+import PeekToken from "../contracts/PeekToken.cdc"
 
 // This transaction uses the NFTMinter resource to mint a new NFT.
 //
@@ -29,6 +29,6 @@ transaction(recipient: Address, userUUID: String) {
             ?? panic("Could not get receiver reference to the NFT Collection")
 
         // mint the NFT and deposit it to the recipient's collection
-        self.minter.mintNFT(recipient: receiver, userUUID: String)
+        self.minter.mintNFT(recipient: receiver, userUUID: userUUID)
     }
 }
