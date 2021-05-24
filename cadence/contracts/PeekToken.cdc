@@ -10,7 +10,7 @@ pub contract PeekToken: NonFungibleToken {
     pub event ContractInitialized()
     pub event Withdraw(id: UInt64, from: Address?)
     pub event Deposit(id: UInt64, to: Address?)
-    pub event Minted(id: UInt64, typeID: UInt64)
+    pub event Minted(id: UInt64, userUUID: String)
 
     // Named Paths
     //
