@@ -1,0 +1,32 @@
+{
+	"emulators": {
+		"default": {
+			"port": 3569,
+			"serviceAccount": "emulator-account"
+		}
+	},
+	"contracts": {
+		"PeekToken": "./cadence/contracts/PeekToken.cdc",
+		"NonFungibleToken": "./cadence/contracts/NonFungibleToken.cdc"
+	},
+	"networks": {
+		"emulator": "127.0.0.1:3569",
+		"mainnet": "access.mainnet.nodes.onflow.org:9000",
+		"testnet": "access.devnet.nodes.onflow.org:9000"
+	},
+	"accounts": {
+		"emulator-account": {
+			"address": "f8d6e0586b0a20c7",
+			"keys": "4da19ee950cbfa49fe5c97ecd4a89a817f97ed4a478d35049ce71d14c06cc7aa"
+		},
+		"my-testnet-account": {
+			"address": "0xa43afa97541f53f1",
+			"keys": "cb434cee2a9124d79957f77f796fc779d062283085836d8db3531379f9446378"
+		}
+	},
+	"deployments": {
+		"testnet": {
+			"my-testnet-account": ["PeekToken", "NonFungibleToken"]
+		}
+	}
+}
