@@ -10,6 +10,15 @@ cadence code to interact with the peek token on the flow blockchain
 3. Run `flow project deploy --network=testnet`
 
 # Examples
+Setup an account.
+
+```bash
+flow accounts create \
+    --key public_key \
+    --host access.testnet.nodes.onflow.org:9000 \
+    --signer my-testnet-account 
+```
+
 Setups an account that can hold PeekTokens for a given users (signers) wallet:
 ```bash
 flow transactions send cadence/transactions/setup_account.cdc --network=testnet --signer my-testnet-account
